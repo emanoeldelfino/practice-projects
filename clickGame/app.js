@@ -1,16 +1,25 @@
 const label = document.querySelector("label[for=box]");
+const bTotalClicks = document.querySelector("span#counter-box b#counter");
+
+if (localStorage.getItem("clicks") === null) {
+  localStorage.setItem("clicks", "0");
+}
+
+bTotalClicks.textContent = localStorage.getItem("clicks");
 
 label.addEventListener("click", () => {
-  const ms = 2000;
+  let clicks = Number(localStorage.getItem("clicks"));
+  clicks += 1;
+  localStorage.setItem("clicks", clicks);
+  const ms = screen.height * 1.5;
   const elem = document.createElement("span");
-  elem.textContent = "+";
+  bTotalClicks.textContent = localStorage.getItem("clicks");
+  elem.textContent = "+1"
   elem.style.cssText = `
   position: absolute;
-  top: 10px;
   width: 40px;
   height: 40px;
   font-size: 40px;
-  top: -40px;
   color: #000000;
   text-align: center;
   line-height: 40px;

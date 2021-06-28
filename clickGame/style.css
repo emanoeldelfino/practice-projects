@@ -1,9 +1,7 @@
 :root {
   --color-dark: #000;
   --color-light: #fff;
-  --color-mild: rgb(128, 128, 128);
-  --bg-size-end: 4.2;
-  --dur: .3s;
+  --color-mild: #808080;
 }
 
 * {
@@ -52,18 +50,23 @@ label[for=box]:active {
   background: var(--color-mild);
 }
 
-@keyframes move {
-  0% {top: -200px; left: 100px;}
-  25% {top: 100px; left: 0px;}
-  50% {top: 50px; left: 150px;}
-  75% {top: 25px; left: 150px;}
-  100% {top: 50px; left: 25px;}
+span#counter-box {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  background-color: var(--color-light);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+b#counter {
+  color: red;
 }
 
 @keyframes move-plus {
-  0% {top: 400px; opacity: .8;}
-  25% {top: 300px; opacity: .6;}
-  50% {top: 200px; opacity: .4;}
-  75% {top: 100px; opacity: .2;}
-  100% {top: 0px; opacity: 0;}
+  0% {top: 45vh; opacity: .8;}
+  25% {top: 35vh; opacity: .6;}
+  50% {top: 25vh; opacity: .4;}
+  75% {top: 15vh; opacity: .2;}
+  100% {top: 5vh; opacity: 0;}
 }
