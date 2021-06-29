@@ -1,5 +1,6 @@
 const label = document.querySelector("label[for=box]");
-const bTotalClicks = document.querySelector("span#counter-box b#counter");
+const bTotalClicks = document.querySelector("div#counter-box span b#counter");
+const refreshButton = document.querySelector("span#refresh");
 
 if (localStorage.getItem("clicks") === null) {
   localStorage.setItem("clicks", "0");
@@ -36,3 +37,8 @@ label.addEventListener("click", () => {
     document.body.removeChild(elem);
   }, ms - 100)
 });
+
+refreshButton.addEventListener("click", () => {
+  localStorage.clear();
+  bTotalClicks.textContent = "0";
+})

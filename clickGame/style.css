@@ -50,17 +50,31 @@ label[for=box]:active {
   background: var(--color-mild);
 }
 
-span#counter-box {
+div#top-left-corner {
+  display: flex;
+  align-items: center;
   position: absolute;
-  left: 10px;
-  top: 10px;
+  left: 15px;
+  top: 25px;
+}
+
+div#top-left-corner div#counter-box {
+  display: flex;
+  justify-content: space-around;
   background-color: var(--color-light);
   padding: 10px;
   border-radius: 10px;
+  width: 150px;
+  margin-right: 15px;
 }
 
 b#counter {
   color: red;
+}
+
+span#refresh {
+  cursor: pointer;
+  user-select: none;
 }
 
 @keyframes move-plus {
