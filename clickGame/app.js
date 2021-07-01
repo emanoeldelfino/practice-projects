@@ -1,4 +1,4 @@
-const label = document.querySelector("label[for=box]");
+const label = document.querySelector("button#click");
 const bTotalClicks = document.querySelector("div#counter-box span b#counter");
 const refreshButton = document.querySelector("span#refresh");
 

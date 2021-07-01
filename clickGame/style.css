@@ -22,13 +22,7 @@ body {
   background: #57bd84;
 }
 
-input[type=checkbox] {
-  height: 0;
-  width: 0;
-  visibility: hidden;
-}
-
-label[for=box] {
+button#click {
   outline: none;
   user-select: none;
   font-size: 2.5rem;
@@ -46,8 +40,9 @@ label[for=box] {
   animation-direction: alternate;
 }
 
-label[for=box]:active {
+button#click:active {
   background: var(--color-mild);
+  transform: scale(1.1);
 }
 
 div#top-left-corner {
