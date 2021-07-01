@@ -1,4 +1,4 @@
-const label = document.querySelector("button#click");
+const button = document.querySelector("button#click");
 const bTotalClicks = document.querySelector("div#counter-box span b#counter");
 const refreshButton = document.querySelector("span#refresh");
 
@@ -8,7 +8,7 @@ if (localStorage.getItem("clicks") === null) {
 
 bTotalClicks.textContent = localStorage.getItem("clicks");
 
-label.addEventListener("click", () => {
+button.addEventListener("mouseup", () => {
   let clicks = Number(localStorage.getItem("clicks"));
   clicks += 1;
   localStorage.setItem("clicks", clicks);
