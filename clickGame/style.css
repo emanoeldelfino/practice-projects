@@ -31,13 +31,6 @@ button#click {
   border-radius: .4rem;
   border: .3rem solid var(--color-dark);
   background: var(--color-light);
-  position: relative;
-  animation-name: move;
-  animation-duration: 1s;
-  animation-delay: 1s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
 }
 
 button#click:active {
@@ -73,9 +66,24 @@ span#refresh {
 }
 
 @keyframes move-plus {
-  0% {top: 45vh; opacity: .8;}
-  25% {top: 35vh; opacity: .6;}
-  50% {top: 25vh; opacity: .4;}
-  75% {top: 15vh; opacity: .2;}
-  100% {top: 5vh; opacity: 0;}
+  0% {
+    top: 45vh;
+    opacity: .8;
+  }
+  25% {
+    top: 35vh;
+    opacity: .6;
+  }
+  50% {
+    top: 25vh;
+    opacity: .4;
+  }
+  75% {
+    top: 15vh;
+    opacity: .2;
+  }
+  100% {
+    top: 5vh;
+    opacity: 0;
+  }
 }

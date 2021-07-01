@@ -17,7 +17,7 @@ label.addEventListener("click", () => {
   bTotalClicks.textContent = localStorage.getItem("clicks");
   elem.textContent = "+1"
   elem.style.cssText = `
-  position: absolute;
+  position: fixed;
   width: 40px;
   height: 40px;
   font-size: 40px;
@@ -25,7 +25,7 @@ label.addEventListener("click", () => {
   text-align: center;
   line-height: 40px;
   animation-name: move-plus;
-  animation-duration: ${ms / 1000}s;
+  animation-duration: ${ms}ms;
   animation-timing-function: linear;
   animation-iteration-count: 1;
   pointer-events: none;
